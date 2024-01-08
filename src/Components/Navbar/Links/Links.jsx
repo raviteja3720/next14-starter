@@ -1,5 +1,6 @@
 import Link from "next/link";
-import styles from './Links.module.css'
+import styles from "./Links.module.css";
+import NavLink from "./navLinks/NavLink";
 function Links() {
     const links = [
         {
@@ -7,11 +8,11 @@ function Links() {
             title: "Home",
             url: "/",
         },
-        {
-            id: 2,
-            title: "Portfolio",
-            url: "/portfolio",
-        },
+        // {
+        //     id: 2,
+        //     title: "Portfolio",
+        //     url: "/portfolio",
+        // },
         {
             id: 3,
             title: "Blog",
@@ -27,18 +28,16 @@ function Links() {
             title: "Contact",
             url: "/contact",
         },
-        {
-            id: 6,
-            title: "Dashboard",
-            url: "/dashboard",
-        },
+        // {
+        //     id: 6,
+        //     title: "Dashboard",
+        //     url: "/dashboard",
+        // },
     ];
     return (
-        <div className={styles.logo}>
+        <div className={styles.links}>
             {links.map((link) => (
-                <Link href={link.url} key={link.title}>
-                    {link.title}
-                </Link>
+                <NavLink item={link} key={link.title} />
             ))}
         </div>
     );
