@@ -42,8 +42,8 @@ a {
 } */
 
 .container {
-    background-color: rebeccapurple;
-    width: 1536px;
+    background-color: rgb(26, 17, 61);
+    width: auto;
     margin: auto;
     padding-left: 50px;
     padding-right: 50px;
